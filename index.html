@@ -18,6 +18,24 @@
         color: white;
         padding: 2rem 0;
         border-bottom: 5px solid #f1c40f;
+        position: relative;
+      }
+      .logo-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .logo {
+        height: 80px;
+        width: 80px;
+        border: 5px solid #f1c40f;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s;
+        background-size: cover;
+        background-position: center;
       }
       .p-nav {
         background-color: #34495e;
@@ -51,11 +69,25 @@
         padding: 2rem 0;
         margin-top: 2rem;
       }
+      @media (max-width: 768px) {
+        .logo-container {
+          position: static;
+          justify-content: center;
+          margin-bottom: 15px;
+        }
+        .logo {
+          height: 50px;
+        }
+      }
     </style>
   </head>
   <body>
     <!-- سربراه -->
     <header class="p-header text-center">
+      <div class="logo-container">
+        <!-- دلته خپل لوګو انځور اضافه کړئ -->
+        <img src="myfectuer.jpg" alt="د Java زده کړه لوګو" class="logo" />
+      </div>
       <div class="container">
         <h1 class="display-4">د Java زده کړه په پښتو ژبه کې</h1>
         <p class="lead">د پروګرامینګ زده کړه اسانه او د ټولو لپاره</p>
