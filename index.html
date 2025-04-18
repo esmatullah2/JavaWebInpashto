@@ -13,13 +13,20 @@
   <body>
     <!-- سربراه -->
     <header class="p-header text-center">
-      <div class="logo-container">
-        <!-- دلته خپل لوګو انځور اضافه کړئ -->
-        <img src="myfectuer.jpg" alt="د Java زده کړه لوګو" class="logo" />
-      </div>
       <div class="container">
+        <div class="logo-container">
+          <img src="/myfectuer.jpg" alt="د Java زده کړه لوګو" class="logo" />
+        </div>
+        <div class="user-icon-container">
+          <h1 class="user-icon-heading" onclick="loginForm()">A</h1>
+        </div>
         <h1 class="display-4">د Java زده کړه په پښتو ژبه کې</h1>
         <p class="lead">د پروګرامینګ زده کړه اسانه او د ټولو لپاره</p>
+        <p>
+          د ټولو ملګرو د پام وړ په دغه ویب سایټ اوس هم کار روان دی چي مکمل یه
+          کړو که کم مشکل وو په یو ځای کي زموږ سره په لاندي شماره په واټساپ خبره
+          کولای سۍ
+        </p>
       </div>
     </header>
 
@@ -36,116 +43,177 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">کور</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#basics">مبادي</a>
+              <a
+                class="nav-link active"
+                href="#"
+                onclick="loadPage('homePage/mainPage2.html'); event.preventDefault();"
+                >کور</a
+              >
             </li>
-            <li class="nav-item"><a class="nav-link" href="#oop">OOP</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#examples">بېلګې</a>
+              <a
+                class="nav-link"
+                href="#"
+                onclick="loadPage('homePage/homePageCop.html'); event.preventDefault();"
+                >د Java زده کړه</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#exercises">تمرینونه</a>
+              <a class="nav-link" href="">بېلګې</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">تمرینونه</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">لاګین</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">زموږ په اړه</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- اصلي محتوا -->
-    <main class="container my-5">
-      <section id="basics">
-        <h2 class="mb-4 text-primary">د Java شروع</h2>
-
-        <article>
-          <h3>وریبلونه (Variables)</h3>
-          <p>
-            په Java کې وریبلونه د ډیټا د ذخیره کولو لپاره کارول کیږي. هر وریبل
-            یو ځانګړی ډول لري.
+    <!-- که چیري په مینو باندي کلیک وه سي نو ته هغه صفحه دلته راته خلاصه وه-->
+    <div id="containerforpagescomponent">
+      <!-- هیرو سکشن -->
+      <section class="hero-section">
+        <div class="container">
+          <h2 class="display-5 mb-4">
+            په پښتو کې د Java پروګرامینګ زده کړه پیل کړئ
+          </h2>
+          <p class="lead mb-4">
+            د Java په اړه ټول اړین معلومات په خپل ژبه کې زده کړئ
           </p>
-
-          <div class="p-code">
-            // د وریبلونو د تعریف بېلګې<br />
-            int عمر = 25; // د عدد لپاره<br />
-            double قد = 1.75; // د اعشاري عدد لپاره<br />
-            char جندر = 'ن'; // د یوې حرف لپاره<br />
-            String نوم = "زمری"; // د متن لپاره<br />
-            boolean فعال = true; // د صحیح/غلط لپاره
-          </div>
-        </article>
-
-        <article class="mt-5">
-          <h3>شرطیزې بیانونه (If-Else)</h3>
-          <p>په Java کې د شرطونو د چک کولو لپاره if-else بیانونه کاروو.</p>
-
-          <div class="p-code">
-            int نمره = 85;<br /><br />
-
-            if (نمره >= 90) {<br />
-            &nbsp;&nbsp;System.out.println("ممتاز");<br />
-            } else if (نمره >= 80) {<br />
-            &nbsp;&nbsp;System.out.println("ښه");<br />
-            } else if (نمره >= 70) {<br />
-            &nbsp;&nbsp;System.out.println("متوسط");<br />
-            } else {<br />
-            &nbsp;&nbsp;System.out.println("ناسم");<br />
-            }
-          </div>
-
-          <div class="p-example">
-            <h4>پايله:</h4>
-            <p class="mb-0">ښه</p>
-          </div>
-        </article>
+          <a href="tutorials.html" class="btn btn-success btn-lg"
+            >اوس زده کړه پیل کړئ</a
+          >
+        </div>
       </section>
 
-      <section id="oop" class="mt-5">
-        <h2 class="mb-4 text-primary">د اوپس-جرایي پروګرامینګ (OOP)</h2>
-
-        <article>
-          <h3>کلاسونه او شیان</h3>
-          <p>په Java کې هر شی د یوې کلاس څخه جوړیږي.</p>
-
-          <div class="p-code">
-            // د حیوان کلاس تعریف<br />
-            class حیوان {<br />
-            &nbsp;&nbsp;// د کلاس خاصیتونه (fields)<br />
-            &nbsp;&nbsp;String نوم;<br />
-            &nbsp;&nbsp;int عمر;<br /><br />
-
-            &nbsp;&nbsp;// د کلاس میتود<br />
-            &nbsp;&nbsp;void غږ کړه() {<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("حیوان غږ کوي!");<br />
-            &nbsp;&nbsp;}<br />
-            }<br /><br />
-
-            // د حیوان کلاس کارول<br />
-            حیوان زما حیوان = new حیوان();<br />
-            زما حیوان.نوم = "اسپ";<br />
-            زما حیوان.عمر = 5;<br />
-            زما حیوان.غږ کړه();
+      <!-- اصلي محتوا -->
+      <main class="container" id="main-content">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="feature-box text-center">
+              <div class="feature-icon">📚</div>
+              <h3>د Java مبادي</h3>
+              <p>
+                د Java پروګرامینګ بنسټیزې مفاهیم زده کړئ لکه متغیرونه، ډیټا
+                ډولونه، کنټرول ساختمانونه او نور.
+              </p>
+              <a href="basics.html" class="btn btn-outline-primary">وګورئ</a>
+            </div>
           </div>
-        </article>
-      </section>
-    </main>
 
+          <div class="col-md-4">
+            <div class="feature-box text-center">
+              <div class="feature-icon">🧩</div>
+              <h3>OOP مفاهیم</h3>
+              <p>
+                د شیعه-جرایي پروګرامینګ (OOP) په Java کې زده کړئ - کلاسونه،
+                شیان، انهریټنس، پولیمورفیزم او نور.
+              </p>
+              <a href="oop.html" class="btn btn-outline-primary">وګورئ</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-box text-center">
+              <div class="feature-icon">💻</div>
+              <h3>عملي بېلګې</h3>
+              <p>
+                د Java په اړه عملي کوډ بېلګې وګورئ چې تاسو ته د مختلفو مفاهیمو
+                په پلي کولو کې مرسته کوي.
+              </p>
+              <a href="examples.html" class="btn btn-outline-primary">وګورئ</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">د Java په اړه</h3>
+                <p class="card-text">
+                  Java یوه پیاوړې، شیعه-جرایي او پلیټفارم خپلواکه پروګرامینګ ژبه
+                  ده چې په 1995 کې د Sun Microsystems لخوا رامنځته شوې. دا د
+                  Android ایپسو، ویب ایپلیکیشنونو، ډیسکټاپ ایپلیکیشنونو او نورو
+                  لپاره کارول کیږي.
+                </p>
+                <ul>
+                  <li>ساده او اسانه زده کړه</li>
+                  <li>پلیټفارم خپلواکه (Write Once, Run Anywhere)</li>
+                  <li>د شیعه-جرایي پروګرامینګ ملاتړ</li>
+                  <li>لوی ټولنیزې ټولنې ملاتړ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">ولې Java زده کړئ؟</h3>
+                <p class="card-text">
+                  Java د نړۍ یوه له خورا مشهورو پروګرامینګ ژبو څخه ده او د ګڼ
+                  شمیر دلایلو لپاره د زده کړې لپاره غوره انتخاب دی:
+                </p>
+                <ul>
+                  <li>د کار موندلو لوړ فرصتونه</li>
+                  <li>د Android ایپسو پراختیا</li>
+                  <li>لوی کتابخانې او چوکاټونه</li>
+                  <li>د شرکتونو لخوا پراخه کارول</li>
+                  <li>د زده کړې لپاره ښه بنسټ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
     <!-- فوټر -->
     <footer class="p-footer text-center">
       <div class="container">
-        <p>د Java زده کړه په پښتو ژبه کې © 2025 - ټول حقونه خوندي دي</p>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>لینکونه</h4>
+            <ul class="list-unstyled">
+              <li><a href="index.html">کور</a></li>
+              <li><a href="tutorials.html">د Java زده کړه</a></li>
+              <li><a href="about.html">زموږ په اړه</a></li>
+              <li><a href="contact.html">اړیکه</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h4>سرچینې</h4>
+            <ul class="list-unstyled">
+              <li><a href="examples.html">کوډ بېلګې</a></li>
+              <li><a href="exercises.html">تمرینونه</a></li>
+              <li><a href="quiz.html">کویزونه</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h4>اړیکه</h4>
+            <address>
+              <p>بریښنالیک: esmatullahabdullah0@gmail.com</p>
+              <p>ټیلیفون: 0093703232816</p>
+            </address>
+          </div>
+        </div>
+        <hr />
         <p class="mb-0">
-          دې ویب سایټ د پښتو ژبې د پروګرامرانو لپاره جوړ شوی دی
+          د Java زده کړه په پښتو ژبه کې © 2025 - ټول حقونه خوندي دي
         </p>
       </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // د کوډ د اجرا بټنونو لپاره JavaScript
-      document.addEventListener("DOMContentLoaded", function () {
-        // دلته کولی شو د کوډ د اجرا فعالیتونه اضافه کړو
-        console.log("د Java پښتو ویب سایټ چلیدلی");
-      });
-    </script>
+
+    <script src="script.js"></script>
   </body>
 </html>

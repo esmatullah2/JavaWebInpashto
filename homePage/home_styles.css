@@ -49,29 +49,15 @@ body {
 }
 .p-nav {
   background-color: #34495e;
-  padding: 1rem 0;
-}
-.p-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
-.p-nav li {
-  margin: 0 1rem;
 }
 .p-nav a {
   color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   transition: all 0.3s;
 }
 .p-nav a:hover {
   background-color: #f1c40f;
   color: #2c3e50;
-  border-radius: 4px;
 }
 .hero-section {
   background-size: cover;

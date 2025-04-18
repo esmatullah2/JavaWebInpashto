@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ps">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لاګین - د Java زده کړه</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Rgstyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="auth-container">
+        <div class="auth-header">
+          <h2>خپل حساب ته لاګین کړئ</h2>
+          <p>خپل ډیټایلونه په دې فورم کې دننه کړئ</p>
+        </div>
+
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="username" class="form-label"
+              >د کارن نوم یا بریښنالیک</label
+            >
+            <input type="text" class="form-control" id="username" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">پاسورډ</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              required
+            />
+          </div>
+
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="rememberMe"
+              for="rememberMeLabel"
+            />
+            <label
+              class="form-check-label"
+              for="rememberMe"
+              id="rememberMeLabel"
+              >ما په یاد ساتل</label
+            >
+          </div>
+
+          <button type="submit" class="btn btn-primary">لاګین کړئ</button>
+
+          <div class="register-link">
+            نوی کارن یاست؟ <a href="register.html">دلته رجسټر کړئ</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="Rgscript.js"></script>
+  </body>
+</html>
